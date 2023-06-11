@@ -134,7 +134,7 @@ calculate = async () => {
 
         //check for end with operator
         if (isNaN(equation[equation.length - 1]) && equation[equation.length - 1] !== '.'){
-          return 'Enter a valid equation';
+          return 'Enter a valid equation please';
         }
 
      }//end of outer for loop
