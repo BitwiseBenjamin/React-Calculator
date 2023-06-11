@@ -1,0 +1,280 @@
+@import 'variables.scss';
+
+
+//Styles for React Calculator Application
+
+//animations
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+//styling for background
+  .app {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .app::before {
+    content: "";
+    width: 150vw;
+    height: 150vw;
+    background: url(yellowredsplotch-transformed.png) no-repeat center center;
+    background-size: cover;
+    animation: spin 400s infinite linear;
+    position: absolute;
+  }
+
+  //position of style buttons
+  .styleChange{
+    position: absolute;
+    top: 27%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+  }
+
+  //styles for bootstrap overflow div
+  .equationHistory::-webkit-scrollbar {
+    width: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+  .equationHistory::-webkit-scrollbar-thumb {
+    background-color: $clear-btn-color;
+    border-radius: 10px;
+}
+
+  .equationHistory{
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 170px;
+    width: 392px;
+    border-radius: 20px;
+    box-shadow: 6px 6px rgba(61, 61, 61, 0.19);
+  }
+  .equation{
+    background-color: $operator-btn-color;
+    color: $btn-text-color;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-bottom: 7px;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  //Styles for all calculator buttons
+  button {
+    font-size: $btn-font-size;
+    font-style: times new roman;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: $btn-radius;
+    background-color: $primary-btn-color;
+    color: $btn-text-color;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(119, 118, 118, 0.4);
+  }
+  
+  button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(16, 15, 15, 0.3);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: $primary-btn-hover-color;
+    color: $primary-btn-hover-text-color;
+  }
+  
+  //size of calculator
+  .calculator.container{
+    padding: 0px;
+    width: 392px;
+    height: 410px;
+  }
+  
+  /* center buttons in div */
+  .row .buttons {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*Styling fo the buttons*/
+  #backspace{
+    @extend .numbers;
+    background-color: $back-btn-color;
+    color: $btn-text-color;
+    font-size: 18px !important;
+  }
+  
+  #backspace:hover {
+    background-color: $back-btn-hover-color !important;
+    color: $back-btn-hover-text-color;
+  }
+
+  #clear{
+    @extend .numbers;
+    background-color: $clear-btn-color;
+    color: $btn-text-color;
+    font-size: 18px !important;
+  }
+  #clear:hover {
+    background-color: $clear-btn-hover-color !important;
+    color: $clear-btn-hover-text-color;
+  }
+
+  #equals{
+    height: $btn-height * 2;
+    width: $btn-width;
+    font-size: 30px;    
+    background-color: $equal-btn-color;
+    color: $btn-text-color;
+  }
+  #equals:hover {
+    background-color: $equal-btn-hover-color !important;
+    color: $equal-btn-hover-text-color;
+  }
+  
+  #zero{
+    width: $btn-width * 2;
+  }
+
+  #decimal{
+    font-size: 50px !important;
+  }
+
+  .operators:hover{
+      background-color: $operator-btn-hover-color !important;
+      color: $back-btn-hover-text-color;
+  }
+  
+  .numbers{
+  height: $btn-height;
+  width: $btn-width;
+  }
+
+  //inheritance example
+  .operators{
+    @extend .numbers;
+    background-color: $operator-btn-color;
+    color: $btn-text-color;
+  }
+  
+  .display{
+    height: $btn-height;
+    width: $btn-width * 5;
+    font-size: 45px;
+    text-align: right;
+    padding-right: 27px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    margin:auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: $btn-text-color;
+    background-color: $primary-btn-color;
+    border-radius: 60px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  //position calculator in middle of screen
+  .app .calculator{
+    position: absolute;
+    top: 55%;;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .title{
+    position: absolute;
+    top: $title-position-top;
+    left: $title-position-left;
+    height: 50px;
+    width: 50px;
+    transform: translate(-50%, -50%);
+  }
+
+  //Style changing buttons
+  .style-light{
+    color:white;
+  }
+
+  .style-dark{
+ color:white;
+  }
+
+  //Title Styling
+
+  //Nesting Example
+  .center{
+    transform:perspective(1000px) translate(-50%,-50%);
+    transform:skewY(15deg);
+    transition:0.5s;
+
+  h1 span{
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    text-transform:uppercase;
+    font-size: 2.7em;
+    color: white;
+    transform-style:preserve-3d;
+    transition:0.8s;
+  
+  }
+  }
+  
+  .center h1 span:nth-child(1){
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  }
+  
+  .center h1 span:nth-child(2){
+    color: $title-color;
+    transform:translate(-50%,-50%) skewX(-60deg);
+    left:-9px;
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+  
+  .center h1 span:nth-child(3){
+    transform:translate(-50%,-50%) skewY(0deg);
+    left:-19px;
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  }
+
+//styles used in javascript
+  .transformTitle{
+    transform:perspective(1000px) translate(-50%,-50%);
+    transform:skewY(0deg);
+  }
+  
+  .transformNodes{
+    transform:translate(-50%,-50%) skewX(0deg) !important;
+    left:0 !important;
+    color: #4aabf5 !important;
+  }
+  
+  .button-hover{
+    color: $primary-btn-color !important;
+  }

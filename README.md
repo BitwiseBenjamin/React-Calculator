@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# React Calculator App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+The React Calculator App is a simple calculator application built using React. It provides basic mathematical calculations and keeps a history of previous equations. The app includes error checking for input equations, removing extra operators, and validating equation correctness.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+1. Ensure that you have Node.js and npm installed on your system.
+2. Clone the repository or download the project files.
+3. Open a terminal in the project directory.
+4. Run the following command to install the dependencies: npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once the dependencies are installed, start the application by running: npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This will launch the app in your default browser.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Hovering over the calculator title transforms it and changes its color, providing a visual feedback to the user.
 
-### `npm run build`
+Hovering over the history section removes the numbers from the calculator, improving visibility and focus.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The project structure is organized as follows:
+markdown
+Copy code
+- src/
+  - redux/
+    - [Redux-related files]
+  - components/
+    - [Component files]
+  - styles/
+    - [Sass files]
+  - index.js
+- public/
+  - index.html
+  - manifest.json
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The src/ directory contains the main source code of the application.
+The src/redux/ directory contains the Redux-related files, including actions, reducers, and the store configuration.
+The src/components/ directory holds the various components used in the application.
+The src/styles/ directory contains the Sass files for styling the components.
+The public/ directory contains the main HTML file index.html and the web app manifest file manifest.json.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React
+Redux
+Bootstrap
+jQuery
+Sass
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Key Dependencies
 
-## Learn More
+Here are the main dependencies used in this project:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+{
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "bootstrap": "^5.3.0",
+    "jquery": "^3.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.7",
+    "web-vitals": "^2.1.4"
+  }
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
+Contributions to this project are currently not accepted. However, if you encounter any issues or have suggestions, feel free to create an issue in the project repository.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is currently not licensed.
